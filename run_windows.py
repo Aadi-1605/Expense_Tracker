@@ -17,7 +17,7 @@ def run_application():
         print(f"❌ Error: Make sure '{BACKEND_SCRIPT}' and '{FRONTEND_SCRIPT}' are in this folder.")
         input("Press Enter to exit.")
         return
- 
+
     python_executable = sys.executable
 
     try:
