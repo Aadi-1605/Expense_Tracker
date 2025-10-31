@@ -3,6 +3,8 @@ import subprocess
 import time
 import os
 import sys
+import sqlite3
+
 
 BACKEND_SCRIPT = 'backend_server.py'
 FRONTEND_SCRIPT = 'frontend_app.py'
