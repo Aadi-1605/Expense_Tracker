@@ -4,7 +4,7 @@ import time
 import os
 import sys
 import sqlite3
-
+#
 def setup_database():
     """Creates the database and table if they don't exist."""
     try:
@@ -26,7 +26,8 @@ def setup_database():
         print(f"Error setting up database: {e}")
         input("Press Enter to exit.") # So user can see the error
         sys.exit(1)
-        
+
+#
 BACKEND_SCRIPT = 'backend_server.py'
 FRONTEND_SCRIPT = 'frontend_app.py'
 
