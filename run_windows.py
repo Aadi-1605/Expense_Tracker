@@ -3,29 +3,8 @@ import subprocess
 import time
 import os
 import sys
-import sqlite3
+
 #
-def setup_database():
-    """Creates the database and table if they don't exist."""
-    try:
-        conn = sqlite3.connect('expenses.db')
-        cursor = conn.cursor()
-        cursor.execute('''
-            CREATE TABLE IF NOT EXISTS expenses (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                date TEXT NOT NULL,
-                item TEXT NOT NULL,
-                amount REAL NOT NULL,
-                utr TEXT
-            )
-        ''')
-        conn.commit()
-        conn.close()
-        print("Database checked and ready.")
-    except Exception as e:
-        print(f"Error setting up database: {e}")
-        input("Press Enter to exit.") # So user can see the error
-        sys.exit(1)
 
 #
 BACKEND_SCRIPT = 'backend_server.py'
